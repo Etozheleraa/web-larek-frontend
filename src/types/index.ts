@@ -15,16 +15,17 @@ export interface IProductItem {
     address: string;
     phone: string;
     email: string;
-    total_price: string | number;
+    total: number;
+    items: string[];
   }
   
   export interface IOrder {
     // Массив купленных товаров
-    products: string[];
+    items: string[];
     // Способ оплаты
     payment: string;
     // Сумма заказа
-    total_price: number;
+    total: number;
     address: string;
     email: string;
     phone: string;
@@ -32,7 +33,7 @@ export interface IProductItem {
   
   export interface IOrderResult {
     id: string;
-    total_price: number;
+    total: number;
   }
   
   // тип ошибки формы
